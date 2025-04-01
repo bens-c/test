@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPT Explanation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            max-width: 800px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid wheat;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .explanation {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .hidden {
+            display: none;
+        }
+        .back-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GPT Explanation</h1>
+        <button onclick="showExplanation('architecture')">Explain Architecture</button>
+        <button onclick="showExplanation('training')">Explain Training Process</button>
+        <button onclick="showExplanation('applications')">Explain Applications</button>
+        <div class="back-container">
+            <button id="backButton" class="hidden" onclick="showExplanation('home')">Back</button>
+        </div>
+        
+        <div class="explanation" id="explanation">
+            <h2>Welcome to GPT Explanation</h2>
+            <p>This web page provides information about the GPT (Generative Pre-trained Transformer) model, its architecture, training process, and applications. 
+            Use the buttons above to navigate through different sections and learn more about GPT.</p>
+        </div>
+    </div>
+
+    <script>
+        function showExplanation(type) {
+            let explanation = '';
+            if (type === 'home') {
+                explanation = `
+                    <h2>Welcome to GPT Explanation</h2>
+                    <p>This web page provides information about the GPT (Generative Pre-trained Transformer) model, its architecture, training process, and applications. 
+                    Use the buttons above to navigate through different sections and learn more about GPT.</p>
+                `;
+                document.getElementById('backButton').classList.add('hidden');
+            } else {
+                if (type === 'architecture') {
+                    explanation = `
+                        <h2>Architecture</h2>
+                        <p>GPT stands for Generative Pre-trained Transformer. It is based on the Transformer architecture, which uses self-attention mechanisms to process input data. 
+                        The model consists of multiple layers of self-attention and feed-forward neural networks. Each layer helps the model understand the context and relationships between words in a sentence.</p>
+                    `;
+                } else if (type === 'training') {
+                    explanation = `
+                        <h2>Training Process</h2>
+                        <p>The training process of GPT involves unsupervised learning on a large corpus of text data. The model is pre-trained on this data to learn grammar, facts about the world, and some reasoning abilities. 
+                        During pre-training, the model is trained to predict the next word in a sentence given the previous words. This helps the model generate coherent and contextually relevant text.</p>
+                    `;
+                } else if (type === 'applications') {
+                    explanation = `
+                        <h2>Applications</h2>
+                        <p>GPT has a wide range of applications, including:</p>
+                        <ul>
+                            <li>Text generation: Creating human-like text based on a given prompt.</li>
+                            <li>Language translation: Translating text from one language to another.</li>
+                            <li>Summarization: Summarizing long pieces of text into shorter, coherent summaries.</li>
+                            <li>Question answering: Providing answers to questions based on the knowledge it has acquired during training.</li>
+                        </ul>
+                    `;
+                }
+                document.getElementById('backButton').classList.remove('hidden');
+            }
+            document.getElementById('explanation').innerHTML = explanation;
+        }
+    </script>
+</body>
+</html>
