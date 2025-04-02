@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Was ist GPT? – Erklärung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #FF4500;
+        }
+        .faq-container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #FFD700;
+        }
+        .faq-item {
+            margin-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .faq-title {
+            font-weight: bold;
+            cursor: pointer;
+            color: #000080;
+            margin-top: 10px;
+        }
+        .faq-title1 {
+            font-weight: bold;
+            color: #000;
+            margin-top: 10px;
+        }
+        .faq-title2 {
+            font-weight: bold;
+            cursor: pointer;
+            color: #FFA500;
+            margin-top: 10px;
+       }
+        .©          {
+            font-weight : bold;
+            cursor : pointer;
+            color : #7400EE;
+            margin-top : 1px;
+        }
+        .faq-content {
+            display: none;
+            margin-left: 15px;
+            padding: 5px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+        .toggle-btn {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            background: #000080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="toggle-btn" onclick="toggleLanguage()">Wechsel zu Englisch</button>
+
+    <div class="faq-container" id="faq-de">
+        <h2>Was ist GPT? – Eine detaillierte Erklärung</h2>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(1)">1. Was bedeutet GPT?</div>
+            <div class="faq-content" id="faq1">
+                <div class="faq-title1">GPT steht für „Generative Pre-trained Transformer“</div>
+
+                <div class="faq-title" onclick="toggleFaq(12)">▶ Generative</div>
+                <div class="faq-content" id="faq12">Kann eigenständig Texte erstellen.</div>
+
+                <div class="faq-title" onclick="toggleFaq(13)">▶ Pre-trained</div>
+                <div class="faq-content" id="faq13">Wurde mit großen Datenmengen vortrainiert.</div>
+
+                <div class="faq-title" onclick="toggleFaq(14)">▶ Transformer</div>
+                <div class="faq-content" id="faq14">Eine spezielle Architektur für KI-Modelle.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(2)">2. Wie funktioniert GPT?</div>
+            <div class="faq-content" id="faq2">
+                <div class="faq-title" onclick="toggleFaq(21)">▶ Mustererkennung</div>
+                <div class="faq-content" id="faq21">Analysiert große Textmengen und erkennt Zusammenhänge.</div>
+
+                <div class="faq-title" onclick="toggleFaq(22)">▶ Wortvorhersage</div>
+                <div class="faq-content" id="faq22">Berechnet Wahrscheinlichkeiten für das nächste Wort.</div>
+
+                <div class="faq-title" onclick="toggleFaq(23)">▶ Attention-Mechanismus</div>
+                <div class="faq-content" id="faq23">Fokussiert sich auf wichtige Wörter im Kontext.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(3)">3. Wo wird GPT eingesetzt?</div>
+            <div class="faq-content" id="faq3">
+                <div class="faq-title" onclick="toggleFaq(31)">▶ Chatbots</div>
+                <div class="faq-content" id="faq31">Automatische Beantwortung von Kundenanfragen.</div>
+
+                <div class="faq-title" onclick="toggleFaq(32)">▶ Texterstellung</div>
+                <div class="faq-content" id="faq32">Generiert Artikel, Berichte und kreative Texte.</div>
+
+                <div class="faq-title" onclick="toggleFaq(33)">▶ Programmierhilfe</div>
+                <div class="faq-content" id="faq33">Gibt Code-Vorschläge und Erklärungen.</div>
+
+                <div class="faq-title" onclick="toggleFaq(34)">▶ Übersetzungen</div>
+                <div class="faq-content" id="faq34">Kann Texte in verschiedene Sprachen übertragen.</div>
+
+                <div class="faq-title" onclick="toggleFaq(35)">▶ Empfehlungen</div>
+                <div class="faq-content" id="faq35">Personalisierte Inhalte basierend auf Nutzerverhalten.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(4)">4. Ist GPT sicher?</div>
+            <div class="faq-content" id="faq4">
+                <div class="faq-title" onclick="toggleFaq(41)">▶ Fehlinformationen</div>
+                <div class="faq-content" id="faq41">Kann falsche oder ungenaue Antworten generieren.</div>
+
+                <div class="faq-title" onclick="toggleFaq(42)">▶ Vorurteile</div>
+                <div class="faq-content" id="faq42">Kann unbeabsichtigte Bias enthalten.</div>
+
+                <div class="faq-title" onclick="toggleFaq(43)">▶ Datenschutz</div>
+                <div class="faq-content" id="faq43">Speichert keine Daten, aber Vorsicht ist geboten.</div>
+
+                <div class="faq-title" onclick="toggleFaq(44)">▶ Missbrauch</div>
+                <div class="faq-content" id="faq44">Kann für Fake-News oder Betrug verwendet werden.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(5)">5. Welche Zukunft hat GPT?</div>
+            <div class="faq-content" id="faq5">
+                <div class="faq-title" onclick="toggleFaq(51)">▶ Weiterentwicklung</div>
+                <div class="faq-content" id="faq51">Wird noch leistungsfähiger und genauer.</div>
+
+                <div class="faq-title" onclick="toggleFaq(52)">▶ Neue Anwendungsbereiche</div>
+                <div class="faq-content" id="faq52">Einsatz in Bildung, Medizin und Forschung wächst.</div>
+
+                <div class="faq-title" onclick="toggleFaq(53)">▶ Ethik</div>
+                <div class="faq-content" id="faq53">Mehr Fokus auf Sicherheit und Transparenz.</div>
+
+                <div class="faq-title" onclick="toggleFaq(54)">▶ Personalisierung</div>
+                <div class="faq-content" id="faq54">Wird interaktiver und individueller auf Nutzer angepasst.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="faq-container" id="faq-en" style="display: none;">
+        <h2>What is GPT? – A Detailed Explanation</h2>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(1, 'en')">1. What does GPT stand for?</div>
+            <div class="faq-content" id="faq1-en">
+                <div class="faq-title1">GPT stands for "Generative Pre-trained Transformer"</div>
+
+                <div class="faq-title" onclick="toggleFaq(12, 'en')">▶ Generative</div>
+                <div class="faq-content" id="faq12-en">Can generate text independently.</div>
+
+                <div class="faq-title" onclick="toggleFaq(13, 'en')">▶ Pre-trained</div>
+                <div class="faq-content" id="faq13-en">Has been trained on large datasets.</div>
+
+                <div class="faq-title" onclick="toggleFaq(14, 'en')">▶ Transformer</div>
+                <div class="faq-content" id="faq14-en">A special architecture for AI models.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(2, 'en')">2. How does GPT work?</div>
+            <div class="faq-content" id="faq2-en">
+                <div class="faq-title" onclick="toggleFaq(21, 'en')">▶ Pattern Recognition</div>
+                <div class="faq-content" id="faq21-en">Analyzes large amounts of text and identifies patterns.</div>
+
+                <div class="faq-title" onclick="toggleFaq(22, 'en')">▶ Word Prediction</div>
+                <div class="faq-content" id="faq22-en">Calculates probabilities for the next word.</div>
+
+                <div class="faq-title" onclick="toggleFaq(23, 'en')">▶ Attention Mechanism</div>
+                <div class="faq-content" id="faq23-en">Focuses on important words in context.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(3, 'en')">3. Where is GPT used?</div>
+            <div class="faq-content" id="faq3-en">
+                <div class="faq-title" onclick="toggleFaq(31, 'en')">▶ Chatbots</div>
+                <div class="faq-content" id="faq31-en">Automated response to customer inquiries.</div>
+
+                <div class="faq-title" onclick="toggleFaq(32, 'en')">▶ Text Generation</div>
+                <div class="faq-content" id="faq32-en">Generates articles, reports, and creative texts.</div>
+
+                <div class="faq-title" onclick="toggleFaq(33, 'en')">▶ Programming Assistance</div>
+                <div class="faq-content" id="faq33-en">Provides code suggestions and explanations.</div>
+
+                <div class="faq-title" onclick="toggleFaq(34, 'en')">▶ Translations</div>
+                <div class="faq-content" id="faq34-en">Can translate texts into different languages.</div>
+
+                <div class="faq-title" onclick="toggleFaq(35, 'en')">▶ Recommendations</div>
+                <div class="faq-content" id="faq35-en">Personalized content based on user behavior.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(4, 'en')">4. Is GPT safe?</div>
+            <div class="faq-content" id="faq4-en">
+                <div class="faq-title" onclick="toggleFaq(41, 'en')">▶ Misinformation</div>
+                <div class="faq-content" id="faq41-en">Can generate false or inaccurate answers.</div>
+
+                <div class="faq-title" onclick="toggleFaq(42, 'en')">▶ Bias</div>
+                <div class="faq-content" id="faq42-en">May contain unintended bias.</div>
+
+                <div class="faq-title" onclick="toggleFaq(43, 'en')">▶ Privacy</div>
+                <div class="faq-content" id="faq43-en">Does not store data, but caution is advised.</div>
+
+                <div class="faq-title" onclick="toggleFaq(44, 'en')">▶ Misuse</div>
+                <div class="faq-content" id="faq44-en">Can be used for fake news or fraud.</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-title2" onclick="toggleFaq(5, 'en')">5. What does the future hold for GPT?</div>
+            <div class="faq-content" id="faq5-en">
+                <div class="faq-title" onclick="toggleFaq(51, 'en')">▶ Development</div>
+                <div class="faq-content" id="faq51-en">Will become more powerful and accurate.</div>
+
+                <div class="faq-title" onclick="toggleFaq(52, 'en')">▶ New Applications</div>
+                <div class="faq-content" id="faq52-en">Applications in education, medicine, and research are growing.</div>
+
+                <div class="faq-title" onclick="toggleFaq(53, 'en')">▶ Ethics</div>
+                <div class="faq-content" id="faq53-en">More focus on safety and transparency.</div>
+
+                <div class="faq-title" onclick="toggleFaq(54, 'en')">▶ Personalization</div>
+                <div class="faq-content" id="faq54-en">Will become more interactive and tailored to users.</div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleFaq(id, lang = 'de') {
+            var content = document.getElementById("faq" + id + (lang === 'en' ? '-en' : ''));
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+
+        function toggleLanguage() {
+            var deContainer = document.getElementById("faq-de");
+            var enContainer = document.getElementById("faq-en");
+            var button = document.querySelector(".toggle-btn");
+
+    if (deContainer.style.display === "none") {
+        deContainer.style.display = "block";
+        enContainer.style.display = "none";
+       button.innerText = "Wechsel zu Englisch";
+    } else {
+        deContainer.style.display = "none";
+        enContainer.style.display = "block";
+        button.innerText = "Switch to German";
+    }
+
+    // Alle geöffneten FAQ-Inhalte ausblenden 
+        var allFaqContents = document.querySelectorAll(".faq-content");
+       allFaqContents.forEach(function(content) {
+        content.style.display = "none";
+    }
+   );
+
+        }
+    </script>
+
+</body>
+</html>
